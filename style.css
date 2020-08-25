@@ -1,0 +1,150 @@
+/* Images: https://unsplash.com/
+
+- All That photo cover by Tim Swaan
+- Creative photo cover by SkyeStudios
+- Energy photo cover by Halacious
+- Going Higher photo cover Matt Duncan
+- Memories photo cover by Jon Tyson
+- Once Again photo cover by Claudio Testa
+
+Music: bensound.com */
+
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,700;1,400&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(#acc8e4, #3877b6) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Cuprum, sans-serif;
+  font-size: 14px;
+  
+}
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: linear-gradient(#6b96c2, #a0bdda) ;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px 10px rgba(8, 8, 8, 0.3)
+}
+
+.img-container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
+
+.img-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px 10px rgba(8, 8, 8, 0.3);
+
+}
+
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(56, 50, 50);
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(56, 50, 50);
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+/* Progress Bar */
+.progress {
+  background: rgb(56, 50, 50);;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.progress:hover {
+  color: rgb(56, 50, 50);
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Music Player Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(56, 50, 50);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover {
+  /*filter: brightness(40%);*/ 
+  color: rgb(90, 84, 84);
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .player-container {
+    width: 95vw;
+  }
+
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
